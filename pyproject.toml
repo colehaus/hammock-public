@@ -1,0 +1,55 @@
+[tool.poetry]
+name = "hammock"
+version = "0.1.0"
+description = "Visualize sentence-by-sentence embeddings for a variety of texts"
+authors = ["Cole Haus"]
+license = "AGPL-3.0-or-later"
+
+include = ["templates/*"]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+# Required for `low_cpu_mem_usage=True`
+accelerate = "^0.20.3"
+flask = { extras = ["async"], version = "^2.2.3" }
+flask-compress = "^1.13"
+gunicorn = "^20.1.0"
+gutenbergpy = "^0.3.5"
+hdbscan = "^0.8.29"
+html2text = "^2020.1.16"
+instructorembedding = "^1.0.0"
+networkx = "^3.1"
+plotly = "^5.14.1"
+scikit-learn-extra = "^0.3.0"
+# https://github.com/UKPLab/sentence-transformers/issues/1590
+sentence-transformers = { git = "https://github.com/UKPLab/sentence-transformers.git", rev = "3e1929fddef16df94f8bc6e3b10598a98f46e62d" }
+# Even though we don't directly depend on torch, we specify it here so we can version lock it to 2.0.0
+# 2.0.1 fails to include a bunch of nvidia cuda stuff as dependencies
+torch = "2.0.0"
+umap-learn = "^0.5.3"
+wikipedia = "^1.4.0"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+pyright = "^1.1.316"
+ruff = "^0.0.263"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+hammock = 'hammock.gunicorn:main'
+
+[tool.black]
+line-length = 115
+include = '\.pyi?$'
+
+[tool.ruff]
+line-length = 115
+ignore = [
+  # We'd rather rely on pyright for these
+  "F403",
+  "F405",
+  "F821"
+  ]

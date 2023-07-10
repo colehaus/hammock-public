@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "checkJs": true,
+    "lib": ["ES2022", "DOM"]
+  },
+  "include": [
+    "templates/plotly.js"
+  ]
+}

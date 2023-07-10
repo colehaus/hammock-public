@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualize {{title}}</title>
+</head>
+<body>
+    <form method="POST" action="{{ action }}">
+        <label for="input_field">{{label|safe}}:</label><br>
+        <textarea id="input_field" name="input_field" rows="20" cols="80" required placeholder="{{placeholder}}"></textarea><br>
+        <button type="submit">Visualize</button>
+    </form>
+</body>
+</html>

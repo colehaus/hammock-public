@@ -1,0 +1,3 @@
+# pylint: skip-file
+
+def download(info_or_id: str, quiet: bool = False) -> None: ...

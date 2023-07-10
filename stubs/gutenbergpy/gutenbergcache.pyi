@@ -1,0 +1,6 @@
+# pylint: skip-file
+
+class GutenbergCache:
+    @staticmethod
+    def get_cache() -> GutenbergCache: ...
+    def query(self, titles: list[str]) -> list[int]: ...

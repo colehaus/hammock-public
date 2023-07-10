@@ -1,0 +1,12 @@
+.direnv/
+dist/
+output/
+result
+cache/
+*.bak
+texts/
+.envrc
+*__pycache__*
+gutenbergindex.db
+private-topics.txt
+.venv/

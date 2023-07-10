@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Visualize text with sentence embeddings</title>
+    </head>
+    <body>
+        {% for title, path in books.items() %}
+            <a href="{{ path }}">{{ title }}</a><br>
+        {% endfor %}
+    </body>
+</html>

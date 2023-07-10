@@ -1,0 +1,14 @@
+{
+  "typeCheckingMode": "strict",
+  "useLibraryCodeForTypes": true,
+  "venv": "7s3vm4swksym5jh7bizribq0gd6cs6pa-python3-3.11.4-env",
+  "venvPath": "/nix/store",
+  "stubPath": "stubs",
+  "reportInvalidStubStatement": false,
+  "reportInvalidTypeVarUse": false,
+  "reportUnnecessaryIsInstance": false,
+  "reportUnnecessaryTypeIgnoreComment": true,
+  "reportUnknownLambdaType": false,
+  "reportUnusedFunction": "warning",
+  "ignore": ["tmp", "result"]
+}
